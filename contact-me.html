@@ -16,7 +16,7 @@
       <img src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/98/2014/09/07214404/Signature_Stacked_White.png" />
       
       <form id="connect-form">
-        <div class="form-group">
+        <div class="form-group valid">
           <input 
               type="text" 
               class="form-control" 
@@ -25,7 +25,8 @@
               placeholder="First Name"
               name="fname"
           />
-
+        </div>
+        <div class="form-group valid">
           <input 
               type="text" 
               class="form-control" 
@@ -34,7 +35,9 @@
               placeholder="Last Name"
               name="lname"
           />
+          </div>
 
+          <div class="form-group valid">
           <input 
               type="email" 
               class="form-control" 
@@ -43,7 +46,9 @@
               placeholder="Email Address"
               name="email"
           />
+          </div>
 
+          <div class="form-group">
           <select 
               id="reason-for-contacting"
               class="form-select form-group" 
@@ -59,7 +64,9 @@
               value="2">Scan Code
             </option>
           </select>
+          </div>
 
+          <div class="form-group valid">
           <input 
               type="text" 
               class="form-control" 
@@ -67,9 +74,10 @@
               aria-describedby="Job title" 
               placeholder="Job Title"
               name="job-title"
-              
           />
+          </div>
 
+          <div class="form-group valid">
           <input 
               type="text" 
               class="form-control" 
@@ -77,9 +85,10 @@
               aria-describedby="Company website" 
               placeholder="Company Website"
               name="website"
-              
           />
+          </div>
 
+          <div class="form-group valid">
           <input 
               type="text" 
               class="form-control" 
@@ -87,16 +96,17 @@
               aria-describedby="Coding Language" 
               placeholder="Coding Language"
               name="coding-language"
-              
           />
+          </div>
 
+        <div class="form-group valid">
          <textarea 
               class="form-control" 
               id="message" 
               aria-describedby="message" 
               placeholder="Message"
               name="message"></textarea>
-
+              </div>
           <button 
               type="submit"
               class="btn btn-primary">
@@ -106,6 +116,6 @@
       </form>
 
     </div>
-  <script src="./contact-me.js"></script>
+  <script src="contact-me.js"></script>
   </body>
 </html>
