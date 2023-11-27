@@ -52,6 +52,7 @@ textarea::placeholder {
     border-radius: unset;
 }
 
+
 .form-control {
     text-align: center;
     /* margin-bottom: 20px; */
@@ -64,8 +65,7 @@ select {
     text-align: center;
     color: #888 !important;
     margin-top: -2px !important;
-    margin-bottom:20px;
-    
+    margin-bottom:20px; 
 }
 
 

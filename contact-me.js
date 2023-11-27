@@ -15,6 +15,7 @@ const validLength = (input, min) => {
 	// debugger
 	if (input.value.trim().length >= min) { 
 		input.parentElement.classList.remove("invalid")
+		input.parentElement.classList.add("valid")
 		return true
 	} else {
 		input.parentElement.classList.add("invalid")
@@ -26,6 +27,7 @@ const validateEmail = (emailField) => {
 	const re =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 	if(re.test(email.value.trim())) {
 		emailField.parentElement.classList.remove('invalid')
+		emailField.parentElement.classList.add('valid')
 		return true
 	} 
 	else {
