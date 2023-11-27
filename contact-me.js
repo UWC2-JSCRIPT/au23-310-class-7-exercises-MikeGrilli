@@ -15,11 +15,10 @@ const validLength = (input, min) => {
 	// debugger
 	if (input.value.trim().length >= min) { 
 		input.parentElement.classList.remove("invalid")
-		// input.parentElement.classList.add("valid")
+		input.parentElement.classList.add("valid")
 		return true
 	} else {
 		input.parentElement.classList.add("invalid")
-		e.preventDefault()
 		return false
 	}
 }
@@ -62,4 +61,3 @@ connectForm.addEventListener('submit', (e) => {
 	validLength(message, 10)
 	handleSelect(reasonForContacting)
 })
-
