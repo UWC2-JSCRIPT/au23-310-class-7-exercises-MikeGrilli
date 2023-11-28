@@ -40,6 +40,7 @@ const validateEmail = (emailField) => {
 	else {
 		emailField.parentElement.classList.add('invalid')
 		emailField.placeholder = `Must be a valid email!`
+		emailField.vlue = ''
 		return false
 	}
 }
@@ -58,7 +59,6 @@ function handleSelect()  {
 		website.parentElement.classList.add('hidden')
 	}
 }
-
 
 reasonForContacting.addEventListener("change", ( handleSelect ) )
 
