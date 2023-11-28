@@ -88,6 +88,7 @@ select {
     border: 3px solid limegreen;
 }
 
+
 .invalid {
     border: 3px solid red;
 }
@@ -95,3 +96,4 @@ select {
 .hidden {
     display: none;
 }
+

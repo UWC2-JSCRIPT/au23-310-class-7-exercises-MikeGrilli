@@ -24,7 +24,7 @@ const validLength = (input, min) => {
 }
 
 const validateEmail = (emailField) => {
-	const re =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+	const re =/\w+@\w+\.\w+/
 	if(re.test(email.value.trim())) {
 		emailField.parentElement.classList.remove('invalid')
 		emailField.parentElement.classList.add('valid')
@@ -36,7 +36,8 @@ const validateEmail = (emailField) => {
 	}
 }
 
-const handleSelect = (reasonForContacting) => {
+
+function handleSelect()  {
 	const selectedValue = reasonForContacting.value
 	if(selectedValue === 'Job Opportunity') {
 		jobTitle.parentElement.classList.remove('hidden')
@@ -50,6 +51,10 @@ const handleSelect = (reasonForContacting) => {
 	}
 }
 
+
+reasonForContacting.addEventListener("change", ( handleSelect ) )
+
+
 connectForm.addEventListener('submit', (e) => {
     e.preventDefault()
     validLength(fname, 3)
@@ -58,6 +63,5 @@ connectForm.addEventListener('submit', (e) => {
 	validLength(jobTitle, 3)
 	validLength(website, 3)
 	validLength(codingLanguage, 3)
-	validLength(message, 10)
-	handleSelect(reasonForContacting)
+	validLength(message, 10) 
 })
