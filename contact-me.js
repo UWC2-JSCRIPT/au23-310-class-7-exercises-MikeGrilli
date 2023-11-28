@@ -12,13 +12,20 @@ const message = document.getElementById('message')
 
 
 const validLength = (input, min) => {
-	// debugger
+	// debugger	
 	if (input.value.trim().length >= min) { 
 		input.parentElement.classList.remove("invalid")
 		input.parentElement.classList.add("valid")
 		return true
 	} else {
 		input.parentElement.classList.add("invalid")
+		if(input.value.trim().length  < 3) {
+			input.placeholder = `Input must be ${min} or more characters!`
+			input.value = ''
+		} else if(input.value.trim().length  < 10) {
+			input.placeholder = `Input must be ${min} or more characters!`
+			input.value = ''
+		}
 		return false
 	}
 }
@@ -32,6 +39,7 @@ const validateEmail = (emailField) => {
 	} 
 	else {
 		emailField.parentElement.classList.add('invalid')
+		emailField.placeholder = `Must be a valid email!`
 		return false
 	}
 }
@@ -44,7 +52,7 @@ function handleSelect()  {
 		website.parentElement.classList.remove('hidden')
 		codingLanguage.parentElement.classList.add('hidden')
 
-	} else if(selectedValue === 'Scan Code') {
+	} else if(selectedValue === 'Talk Code') {
 		codingLanguage.parentElement.classList.remove('hidden')
 		jobTitle.parentElement.classList.add('hidden')
 		website.parentElement.classList.add('hidden')

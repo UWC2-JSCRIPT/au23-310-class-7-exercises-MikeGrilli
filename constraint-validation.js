@@ -14,7 +14,7 @@ const validLength = (input, min) => {
 }
 
 const validateEmail = (email) => {
-	const re =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+	const re =/\w+@\w+\.\w+/
 	if(re.test(email.value.trim())) {
 		email.parentElement.classList.remove('invalid')
 		return true
